@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Self taught software developer and reverse engineer, I love to build (and rebuild) things as well as exploring the inner working of things just to waste time.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Currently working as a contractor.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[projectm12@protonmail.com](mailto:projectm12@protonmail.com)
