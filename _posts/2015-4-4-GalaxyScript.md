@@ -37,8 +37,8 @@ In this post I'm gonna explain how to dump those functions & the according enums
 At the beggining we need to reach the table which contains all the Galaxy functions about to be registered for the game.
 You could search for any Galaxy script function name in order to reach it, let say "GalaxyNativeInvalid" which is in fact the first entry of the table but any function name would work but you'll have to search for the beggining.
 
-You'll end up to something like this (some things have been renamed) :
-**INSERT CODE THERE**
+You'll end up to something like this (some fields have been renamed) :
+![Data](../images/2015-4-4-GalaxyScript/Capture1.png)
 
 Looking at `GalaxyNativeInvalid` and `DebugString` we could guess the size of each entries in the registration table, which is 0x18 (1DAB0F0h - 1DAB0F0h).
 
@@ -58,7 +58,7 @@ struct __declspec(align(1)) GalaxyScriptEntry_t
 ```
 
 Now, looking at the xref provided by IDA for the first field of the registration table we end up at a lone function :
-**INSERT CODE THERE**
+![RegisterAll function](../images/2015-4-4-GalaxyScript/Capture2.png)
 
 We'll use this to parse the table and dump usefull informations in a next chapter.
 
@@ -67,14 +67,10 @@ We'll use this to parse the table and dump usefull informations in a next chapte
 Unlike Galaxy functions, Galaxy enums aren't stored in a lone table and not registered from a lone function but the function which actually register each enumeration is unique.
 Like Galaxy functions, finding where is statically stored enums lead to this wanted function.
 
-Example of stored enum data :
-**INSERT CODE THERE**
-
 IDA output of code using those data : 
-**INSERT CODE THERE**
+![Enum function](../images/2015-4-4-GalaxyScript/Capture4.png)
 
 After analysing previous instruction before the call of "GalaxyEnum::Register" and the static data I was able to determine :
-**INSERT CODE THERE**
 
 ```cpp
 struct GalaxyEnumEntry_t
