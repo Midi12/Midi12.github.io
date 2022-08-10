@@ -213,3 +213,5 @@ def _patch_unreachable_blocks( self ):
 ![Patched](../images/2022-8-8-Removing-Opaque-Predicates/patched.PNG)
 
 Patching the now useless _mov/jcc_ blocks is left as an exercise to the reader 😇.
+
+Thanks to [babama](https://github.com/babama-dev) for proof reading 🦝
