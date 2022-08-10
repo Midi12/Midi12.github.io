@@ -25,7 +25,7 @@ When reviewing the assembly code inside IDA I noticed some exotic instructions a
 
 ![Jcc opaque predicates](../images/2022-8-8-Removing-Opaque-Predicates/jcc_opaque.PNG)
 
-The same technique (nothing secret though) is used years after (Obfuscated TLS callback setting up things -- fingerprinting anyone?). Back in the day, I wrote an IDAPython script to handle them as well but it was specific to the binary and the architecture (a lot of things was hardcoded).
+The same technique (nothing secret though) is used years after (Obfuscated TLS callback setting up things). Back in the day, I wrote an IDAPython script to handle them as well but it was specific to the binary and the architecture (a lot of things was hardcoded).
 
 This time I decided to do it the proper way by leveraging the power of the MIASM framework, especially its Intermediate Representation and Symbolic Execution modules.
 
